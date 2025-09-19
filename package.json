@@ -1,39 +1,39 @@
 {
-  "name": "@mariozechner/hotserve",
-  "version": "0.1.0",
-  "description": "Minimal hot-reload development server",
-  "author": "",
-  "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "bin": "./dist/cli.js",
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "build": "tsdown src/index.ts src/cli.ts --format esm --sourcemap --platform node && tsc --declaration --emitDeclarationOnly --outDir dist",
-    "dev": "tsx watch src/index.ts",
-    "test": "npx tsx --test --test-concurrency=1 src/**/*.test.ts",
-    "format": "prettier --write .",
-    "lint": "biome lint .",
-    "check": "npm run format && npm run lint && tsc --noEmit",
-    "prepare": "husky"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^2.1.2",
-    "@types/express": "^5.0.3",
-    "@types/node": "^20.11.2",
-    "@types/ws": "^8.18.1",
-    "husky": "^9.1.1",
-    "prettier": "^3.3.3",
-    "tsdown": "^0.2.16",
-    "tsx": "^4.20.3",
-    "typescript": "^5.8.3"
-  },
-  "dependencies": {
-    "chokidar": "^4.0.3",
-    "commander": "^14.0.1",
-    "express": "^5.1.0",
-    "ws": "^8.18.3"
-  }
+   "name": "@mariozechner/hotserve",
+   "version": "0.1.0",
+   "description": "Minimal hot-reload development server",
+   "author": "",
+   "type": "module",
+   "main": "./dist/index.js",
+   "types": "./dist/index.d.ts",
+   "bin": "./dist/cli.js",
+   "files": [
+      "dist"
+   ],
+   "scripts": {
+      "build": "tsdown src/index.ts src/cli.ts --format esm --sourcemap --platform node && tsc --declaration --emitDeclarationOnly --outDir dist",
+      "dev": "tsx watch src/index.ts",
+      "test": "npx tsx --test --test-concurrency=1 src/**/*.test.ts",
+      "format": "prettier --write .",
+      "lint": "biome lint .",
+      "check": "npm run format && npm run lint && tsc --noEmit",
+      "prepare": "husky"
+   },
+   "devDependencies": {
+      "@biomejs/biome": "^2.1.2",
+      "@types/express": "^5.0.3",
+      "@types/node": "^20.11.2",
+      "@types/ws": "^8.18.1",
+      "husky": "^9.1.1",
+      "prettier": "^3.3.3",
+      "tsdown": "^0.2.16",
+      "tsx": "^4.20.3",
+      "typescript": "^5.8.3"
+   },
+   "dependencies": {
+      "chokidar": "^4.0.3",
+      "commander": "^14.0.1",
+      "express": "^5.1.0",
+      "ws": "^8.18.3"
+   }
 }

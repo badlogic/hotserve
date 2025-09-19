@@ -10,10 +10,15 @@ program
    .description("Minimal hot-reload development server")
    .version("0.1.0")
    .option("-p, --port <port>", "port to run server on", "4000")
-   .option("--path <mapping>", "path mapping in format 'local-dir:route'", (value, previous: PathMapping[]) => {
-      const [localPath, route = "/"] = value.split(":");
-      return [...(previous || []), { localPath, route }];
-   }, [] as PathMapping[])
+   .option(
+      "--path <mapping>",
+      "path mapping in format 'local-dir:route'",
+      (value, previous: PathMapping[]) => {
+         const [localPath, route = "/"] = value.split(":");
+         return [...(previous || []), { localPath, route }];
+      },
+      [] as PathMapping[],
+   )
    .option("-v, --verbose", "verbose output", false)
    .action((options) => {
       const port = parseInt(options.port);

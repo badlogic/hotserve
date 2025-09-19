@@ -110,7 +110,7 @@ export function createLiveReloadServer(options: ServerOptions) {
                next();
             }
          },
-         express.static(localPath)
+         express.static(localPath),
       );
    });
 
